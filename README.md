@@ -1,1 +1,1 @@
-# CursorClassifier
+# Cursor-Classifier
