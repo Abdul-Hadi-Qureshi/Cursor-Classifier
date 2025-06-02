@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Reader with Cursor Tracking</title>
+    <style>
+        #pdf-container {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+        #pdf-viewer {
+            width: 100%;
+            height: 100%;
+        }
+        #overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            cursor: crosshair;
+        }
+        #controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #status {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">PDF Reader with Cursor Tracking</h1>
+    <div id="pdf-container">
+        <iframe src="https://drive.google.com/file/d/1Kgl9-qyVRtNxCkyRtV_XqyNyL6yfkQg6/preview" id="pdf-viewer"></iframe>
+        <div id="overlay"></div>
+    </div>
+    <div id="controls">
+        <button id="start-button">Start Session</button>
+        <button id="end-button">End Session</button>
+    </div>
+    <div id="status">Status: Not Tracking</div>
+
+    <script src="cursor-tracker.js"></script>
+</body>
+</html>
